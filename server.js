@@ -1,10 +1,10 @@
 const express = require('express'); //import express
+const path = require('path'); //import path
 const app = express(); //create an instance
 const port = 3000; //set the port
 
 //middleware that tells  Express to use the 'express.static' middleware to serve all files from the 'public' directory.
-app.arguments(express.static(path.join(__dirname,'public')))
-
+app.use(express.static(path.join(__dirname,'public')));
 // Create a route handler for GET requests to the root URL (/). When this route is requested, it should send the index.html file from your public directory.
 app.get('/', (req,res)=> {
     res.sent
