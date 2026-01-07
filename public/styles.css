@@ -45,6 +45,7 @@ display: flex;
 .contact-form{
  flex-basis: 60%;
  padding: 40px 60px; 
+ border-radius: 30px;
 }
 .side-right{
     flex-basis: 40%;
